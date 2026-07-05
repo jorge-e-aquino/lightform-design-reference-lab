@@ -1,0 +1,37 @@
+{
+  "id": "physical-therapy-rehab-001",
+  "url": "https://example.com",
+  "name": "Example Reference",
+  "status": "candidate",
+  "vertical": "physical_therapy_rehab",
+  "business_model": ["local_service", "appointment_booking"],
+  "primary_conversion": "book_appointment",
+  "audience": ["uncertain_first_timer", "local_patient"],
+  "positioning": "Plain-language outpatient rehab with calm appointment flow",
+  "offer_complexity": "moderate",
+  "trust_need": "high",
+  "risk_tier": "medium",
+  "visual_temperature": "warm",
+  "design_tags": ["simple", "patient_first", "credible", "calm"],
+  "layout_patterns": ["patient_uncertainty_hero", "numbers_block", "concern_pathways", "service_cards", "location_grid"],
+  "trust_patterns": ["plain_process", "location_clarity", "first_visit_reassurance"],
+  "copy_posture": ["direct", "warm", "low_pressure"],
+  "best_for": ["first_screen_copy", "patient_pathways", "appointment_flow"],
+  "avoid_using_for": ["luxury_spa", "product_ecommerce"],
+  "risk_flags": ["healthcare_claims", "insurance_language"],
+  "screenshots": {
+    "desktop": "screenshots/desktop.png",
+    "tablet": "screenshots/tablet.png",
+    "phone": "screenshots/phone.png"
+  },
+  "scores": {
+    "taste": 4,
+    "conversion": 4,
+    "trust": 4,
+    "vertical_fit": 4,
+    "distinctiveness": 3,
+    "extraction_quality": 4
+  },
+  "human_notes": "Replace with Jorge-grade note explaining why this reference belongs in the library.",
+  "do_not_copy": ["Do not reuse exact copy, brand assets, or proprietary layout details."]
+}

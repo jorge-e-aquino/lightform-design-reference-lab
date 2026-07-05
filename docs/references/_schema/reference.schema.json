@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lightform.local/schemas/design-reference.schema.json",
+  "title": "Lightform Design Reference",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "url",
+    "name",
+    "status",
+    "vertical",
+    "business_model",
+    "primary_conversion",
+    "audience",
+    "positioning",
+    "design_tags",
+    "layout_patterns",
+    "trust_patterns",
+    "copy_posture",
+    "best_for",
+    "avoid_using_for",
+    "risk_flags",
+    "scores",
+    "human_notes"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "name": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["candidate", "approved", "anti_pattern", "rejected"]
+    },
+    "vertical": {
+      "type": "string",
+      "enum": [
+        "med_spa_aesthetic",
+        "physical_therapy_rehab",
+        "holistic_wellness",
+        "reiki_spiritual",
+        "product_wellness",
+        "local_service",
+        "general_premium_wellness",
+        "other"
+      ]
+    },
+    "business_model": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "primary_conversion": { "type": "string" },
+    "audience": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "positioning": { "type": "string" },
+    "offer_complexity": {
+      "type": "string",
+      "enum": ["simple", "moderate", "complex", "unknown"]
+    },
+    "trust_need": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "unknown"]
+    },
+    "risk_tier": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "unknown"]
+    },
+    "visual_temperature": {
+      "type": "string",
+      "enum": ["clinical", "warm", "luxury", "editorial", "spiritual", "playful", "minimal", "mixed"]
+    },
+    "design_tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "layout_patterns": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "trust_patterns": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "copy_posture": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "best_for": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "avoid_using_for": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "screenshots": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "desktop": { "type": "string" },
+        "tablet": { "type": "string" },
+        "phone": { "type": "string" }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "taste",
+        "conversion",
+        "trust",
+        "vertical_fit",
+        "distinctiveness",
+        "extraction_quality"
+      ],
+      "properties": {
+        "taste": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "conversion": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "trust": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "vertical_fit": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "distinctiveness": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "extraction_quality": { "type": "integer", "minimum": 1, "maximum": 5 }
+      }
+    },
+    "human_notes": { "type": "string" },
+    "do_not_copy": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    }
+  }
+}
